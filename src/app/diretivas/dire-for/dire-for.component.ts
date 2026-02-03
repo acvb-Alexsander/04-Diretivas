@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dire-for',
   standalone: true,
   imports: [],
   templateUrl: './dire-for.component.html',
-  styleUrl: './dire-for.component.css'
+  styleUrl: './dire-for.component.css',
 })
-export class DireForComponent {
+export class DireForComponent implements OnInit {
+  cursos: string[] = ['Angulas.js', 'React.js', 'Typescript', 'Python'];
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }
