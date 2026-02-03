@@ -1,1 +1,15 @@
 <p>dire-if works!</p>
+
+@if (mostrarCursos) {
+  <div>Lista de cursos</div>
+}
+
+@if (!mostrarCursos) {
+  <div>Não existe cursos para serem listados</div>
+}
+
+<br />
+
+<button class="btn btn-primary" type="button" (click)="changeButton()">
+  Mostrar ou enconder Cursos
+</button>

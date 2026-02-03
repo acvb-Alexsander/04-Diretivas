@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="aba == 'home'"
+            aria-current="page"
+            (click)="aba = 'home'"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="aba == 'feature'"
+            (click)="aba = 'feature'"
+            >Features</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="aba == 'pricing'"
+            (click)="aba = 'pricing'"
+            >Pricing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+@switch (aba) {
+  @case ("home") {
+    <div class="container">Conteudo da Home</div>
+  }
+
+  @case ("feature") {
+    <div class="container">Conteudo da feature</div>
+  }
+
+  @case ("pricing") {
+    <div class="container">Conteudo do pricing</div>
+  }
+}
